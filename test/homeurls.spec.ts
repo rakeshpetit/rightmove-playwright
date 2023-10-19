@@ -1,9 +1,13 @@
 import { test, expect } from "@playwright/test";
 
-const numOfPages = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const numOfPages = [
+  0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21,
+  22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33,
+  // 34, 35, 36, 37, 38, 39, 40,
+];
 
 const url =
-  "https://www.rightmove.co.uk/property-for-sale/find.html?locationIdentifier=USERDEFINEDAREA%5E%7B%22id%22%3A7624740%7D&minBedrooms=2&maxPrice=220000&minPrice=125000&sortType=6&propertyTypes=detached%2Cflat%2Csemi-detached%2Cterraced&secondaryDisplayPropertyType=housesandflats&includeSSTC=false&mustHave=&dontShow=retirement%2CsharedOwnership&furnishTypes=&keywords=";
+  "https://www.rightmove.co.uk/property-for-sale/find.html?locationIdentifier=REGION%5E200&minBedrooms=3&maxPrice=325000&minPrice=200000&radius=15.0&propertyTypes=detached%2Csemi-detached&includeSSTC=false&mustHave=garden&dontShow=retirement&furnishTypes=&keywords=";
 
 for (const pageIndex of numOfPages) {
   test(`List of URLs page ${pageIndex + 1}`, async ({ page }) => {
